@@ -1,22 +1,22 @@
-import OrderSidebar from "@/components/order/OrderSidebar";
-import OrderSummary from "@/components/order/OrderSummary";
-import ToastNotification from "@/components/ui/ToastNotification";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode}>) {
+const inter = Inter({ subsets: ["latin"] });
 
+export const metadata: Metadata = {
+  title: "Quisco Next.js con App Router y Prisma",
+  description: "Quisco Next.js con App Router y Prisma",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
-      <>
-        <div className="md:flex">
-          <OrderSidebar />
-
-          <main className="md:flex-1 md:h-screen md:overflow-y-scroll p-5">
-            {children}
-          </main>
-
-          <OrderSummary />
-        </div>
-
-        <ToastNotification />
-      </>
-  )
+    <html lang="en">
+      <body className={`${inter.className} bg-gray-100`}>{children}</body>
+    </html>
+  );
 }
