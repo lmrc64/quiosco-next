@@ -47,6 +47,14 @@ export default function ProductTable({ products }: ProductTableProps) {
                                             className="text-indigo-600 hover:text-indigo-800"
                                         >Editar <span className="sr-only">, {product.name}</span> </Link>
                                     </td>
+
+                                    <td className="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-0">
+                                        <Link
+                                            href={`/admin/products/${product.id}/delete`}
+                                            className="text-red-600 hover:text-red-800"
+                                        >Eliminar <span className="sr-only">, {product.name}</span> </Link>
+                                    </td>
+
                                 </tr>
                             ))}
                             </tbody>
