@@ -1,5 +1,10 @@
 # Historial de Cambios
 
+## Release 3 (Innovación)
+- **Implementación para la eliminación de productos - US11**
+  - Realizado por: lmrc64
+  - Fecha: 03/06/2024, 10:33 p. m.
+
 ## Release 2
 - **Implementación para la visualización de órdenes listas por el usuario - US10**
     - Realizado por: lmrc64
